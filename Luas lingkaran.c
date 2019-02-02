@@ -43,6 +43,29 @@ void lingkaran() {
 	printf("Luas Lingkaran:%f",luas_lingkaran);
 }
 
+
+void segitiga(){
+	float alas;
+	float tinggi;
+	float luas_segitiga;
+	float keliling_segitiga;
+	
+	//input
+	printf("Masukkan alas: ");
+	scanf("%f",&alas);
+	
+	printf("Masukkan tinggi: ");
+	scanf("%f",&tinggi);
+	
+	//proses
+	luas_segitiga = alas * tinggi / 2;
+	keliling_segitiga = alas * 3;
+	
+	//output
+	printf("Luas Segitiga:%f",luas_segitiga);
+	printf("Keliling Segitiga:%f",keliling_segitiga);
+}
+
 void persegi(){
 	
 	float s;
@@ -60,14 +83,16 @@ void persegi(){
 	//Output
 	printf("Luas Persegi : %f \n",luas_persegi);
 	printf("Keliling Persegi : %f \n",kel_persegi);	
+
 }
 
 int menu(){
 	int pilihan;
 	printf("0. exit\n");
 	printf("1. luas lingkaran\n");
-	printf("2. luas persegi\n");
-	printf("3. Persegi Panjang\n");
+	printf("2. luas segitiga\n");
+	printf("3. luas persegi\n");
+	printf("4. Persegi Panjang\n");
 	printf("masukan pilihan : \n");
 	scanf("%d", &pilihan);
 	switch(pilihan){
@@ -77,9 +102,12 @@ int menu(){
 			lingkaran();
 			break;
 		case 2 :
-			persegi();
+			segitiga();
 			break;
 		case 3 :
+			persegi();
+			break;
+		case 4 :
 			persegipanjang();
 			break;
 		default :
@@ -87,6 +115,7 @@ int menu(){
 
 	}
 }
+
 int main (){
 	
 	while(1) {
