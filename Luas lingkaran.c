@@ -24,22 +24,21 @@ void lingkaran() {
 
 void persegi(){
 	
-	float s1,s2;
+	float s;
 	float luas_persegi;
+	float kel_persegi;
 	
 	//input
-	printf("Masukan Sisi 1 : ");
-	scanf("%f",&s1);
-	
-	printf("Masukan Sisi 2 : ");
-	scanf("%f",&s2);
+	printf("Masukan Sisi : ");
+	scanf("%f",&s);
 	
 	//proses
-	luas_persegi = s1*s2;
+	luas_persegi = s*s;
+	kel_persegi = 4*s;
 	
 	//Output
-	printf("Luas Persegi : %f",luas_persegi);
-	
+	printf("Luas Persegi : %f \n",luas_persegi);
+	printf("Keliling Persegi : %f \n",kel_persegi);	
 }
 
 int menu(){
