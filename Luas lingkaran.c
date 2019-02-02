@@ -1,4 +1,4 @@
-//Program luaslingkaran;
+//Program luaspersegi;
 //{program ini digunakan untuk menghitung luas}
 
 //Deklarasi
@@ -7,6 +7,27 @@
 const float PHI = 3.14;
 
 //Algoritma
+void persegipanjang(){
+	float panjang;
+	float lebar;
+	float luas_pp;
+	float keliling_pp;
+	
+	//input
+	printf("Masukan Panjang : ");
+	scanf("%f",&panjang);
+	printf("Masukan Lebar : ");
+	scanf("%f",&lebar);
+	
+	//proses
+	luas_pp = panjang * lebar;
+	keliling_pp = 2 * (panjang + lebar);
+	
+	//output
+	printf("Luas Persegi Panjang:%f\n",luas_pp);
+	printf("Keliling Persegi Panjang:%f\n",keliling_pp);
+
+}
 void lingkaran() {
 	float r;
 	float luas_lingkaran;
@@ -21,6 +42,7 @@ void lingkaran() {
 	//Output
 	printf("Luas Lingkaran:%f",luas_lingkaran);
 }
+
 
 void segitiga(){
 	float alas;
@@ -44,11 +66,33 @@ void segitiga(){
 	printf("Keliling Segitiga:%f",keliling_segitiga);
 }
 
+void persegi(){
+	
+	float s;
+	float luas_persegi;
+	float kel_persegi;
+	
+	//input
+	printf("Masukan Sisi : ");
+	scanf("%f",&s);
+	
+	//proses
+	luas_persegi = s*s;
+	kel_persegi = 4*s;
+	
+	//Output
+	printf("Luas Persegi : %f \n",luas_persegi);
+	printf("Keliling Persegi : %f \n",kel_persegi);	
+
+}
+
 int menu(){
 	int pilihan;
 	printf("0. exit\n");
 	printf("1. luas lingkaran\n");
 	printf("2. luas segitiga\n");
+	printf("3. luas persegi\n");
+	printf("4. Persegi Panjang\n");
 	printf("masukan pilihan : \n");
 	scanf("%d", &pilihan);
 	switch(pilihan){
@@ -59,6 +103,12 @@ int menu(){
 			break;
 		case 2 :
 			segitiga();
+			break;
+		case 3 :
+			persegi();
+			break;
+		case 4 :
+			persegipanjang();
 			break;
 		default :
 			printf("invailid");
