@@ -7,6 +7,27 @@
 const float PHI = 3.14;
 
 //Algoritma
+void persegipanjang(){
+	float panjang;
+	float lebar;
+	float luas_pp;
+	float keliling_pp;
+	
+	//input
+	printf("Masukan Panjang : ");
+	scanf("%f",&panjang);
+	printf("Masukan Lebar : ");
+	scanf("%f",&lebar);
+	
+	//proses
+	luas_pp = panjang * lebar;
+	keliling_pp = 2 * (panjang + lebar);
+	
+	//output
+	printf("Luas Persegi Panjang:%f\n",luas_pp);
+	printf("Keliling Persegi Panjang:%f\n",keliling_pp);
+
+}
 void lingkaran() {
 	float r;
 	float luas_lingkaran;
@@ -45,7 +66,8 @@ int menu(){
 	int pilihan;
 	printf("0. exit\n");
 	printf("1. luas lingkaran\n");
-	printf("4. luas persegi\n");
+	printf("2. luas persegi\n");
+	printf("3. Persegi Panjang\n");
 	printf("masukan pilihan : \n");
 	scanf("%d", &pilihan);
 	switch(pilihan){
@@ -54,8 +76,12 @@ int menu(){
 		case 1 :
 			lingkaran();
 			break;
-		case 4 :
+		case 2 :
 			persegi();
+			break;
+		case 3 :
+			persegipanjang();
+			break;
 		default :
 			printf("invailid");
 
